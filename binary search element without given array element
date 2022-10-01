@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+    int ar[5]={10,20,30,40,50};
+    int key=40,low=0,high=4,flag=0,mid=(low+high)/2;
+    while(low<high)
+    {
+        mid=(low+high);
+        if(key==ar[mid])
+        {
+            flag=1;
+            break;
+        }
+        else if (key<ar[mid])
+        high=mid-1;
+        else
+        low=mid+1;
+    }
+    if(flag==1)
+    printf("key element is found");
+    else
+    printf("key is element is not found");
+}
